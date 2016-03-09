@@ -16,6 +16,7 @@
 		09C9497E1C90633500E98556 /* CheckBtnAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C9497D1C90633500E98556 /* CheckBtnAnimationTests.m */; };
 		09C949891C90633500E98556 /* CheckBtnAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C949881C90633500E98556 /* CheckBtnAnimationUITests.m */; };
 		09C949981C9064B200E98556 /* CheckBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C949971C9064B200E98556 /* CheckBtn.m */; };
+		09C9499C1C9073B600E98556 /* CALayer+CheckBtnLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C9499B1C9073B600E98556 /* CALayer+CheckBtnLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		09C9498A1C90633500E98556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C949961C9064B200E98556 /* CheckBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckBtn.h; sourceTree = "<group>"; };
 		09C949971C9064B200E98556 /* CheckBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckBtn.m; sourceTree = "<group>"; };
+		09C9499A1C9073B600E98556 /* CALayer+CheckBtnLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+CheckBtnLayer.h"; sourceTree = "<group>"; };
+		09C9499B1C9073B600E98556 /* CALayer+CheckBtnLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+CheckBtnLayer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				09C9496A1C90633400E98556 /* ViewController.m */,
 				09C949961C9064B200E98556 /* CheckBtn.h */,
 				09C949971C9064B200E98556 /* CheckBtn.m */,
+				09C9499A1C9073B600E98556 /* CALayer+CheckBtnLayer.h */,
+				09C9499B1C9073B600E98556 /* CALayer+CheckBtnLayer.m */,
 				09C9496C1C90633400E98556 /* Main.storyboard */,
 				09C9496F1C90633500E98556 /* Assets.xcassets */,
 				09C949711C90633500E98556 /* LaunchScreen.storyboard */,
@@ -279,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C9496B1C90633400E98556 /* ViewController.m in Sources */,
+				09C9499C1C9073B600E98556 /* CALayer+CheckBtnLayer.m in Sources */,
 				09C949681C90633400E98556 /* AppDelegate.m in Sources */,
 				09C949651C90633400E98556 /* main.m in Sources */,
 				09C949981C9064B200E98556 /* CheckBtn.m in Sources */,

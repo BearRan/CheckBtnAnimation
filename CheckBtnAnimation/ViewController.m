@@ -19,8 +19,13 @@
     [super viewDidLoad];
     
     CheckBtn *checkBtn = [[CheckBtn alloc] initWithFrame:CGRectMake(50, 200, 300, 200)];
-    checkBtn.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.6];
+    [checkBtn addTarget:self action:@selector(checkBtnEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:checkBtn];
+}
+
+- (void)checkBtnEvent:(CheckBtn *)btn
+{
+    btn.showCheck = !btn.showCheck;
 }
 
 - (void)didReceiveMemoryWarning {
