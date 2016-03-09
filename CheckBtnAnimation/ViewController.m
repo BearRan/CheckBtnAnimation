@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CheckBtn.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CheckBtn *checkBtn = [[CheckBtn alloc] initWithFrame:CGRectMake(50, 200, 300, 200)];
+    checkBtn.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.6];
+    [self.view addSubview:checkBtn];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,4 +10,6 @@
 
 @interface CheckBtn : UIButton
 
+@property (assign, nonatomic) BOOL showCheck;
+
 @end
