@@ -30,29 +30,27 @@ static CGFloat circleStrokeEnd      = 1;
         self = nil;
     }
     
-    self.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.6];
-    
     checkShapeLayer = [CAShapeLayer layer];
     checkShapeLayer.path = [self checkPath];
+    checkShapeLayer.lineWidth = 3.0f;
+    checkShapeLayer.lineCap = kCALineCapRound;
     checkShapeLayer.strokeColor = [UIColor whiteColor].CGColor;
     checkShapeLayer.fillColor = [UIColor clearColor].CGColor;
     
-//    checkShapeLayer.strokeStart = checkStrokeStart;
-//    checkShapeLayer.strokeEnd = checkStrokeEnd;
-    
-    checkShapeLayer.strokeStart = circleStrokeStart;
-    checkShapeLayer.strokeEnd = circleStrokeEnd;
-    
     [self.layer addSublayer:checkShapeLayer];
     
-//    self.showCheck = YES;
+    self.showCheck = NO;
     
     return self;
 }
 
+
+
 @synthesize showCheck = _showCheck;
 - (void)setShowCheck:(BOOL)showCheck
 {
+    _showCheck = showCheck;
+    
     CABasicAnimation *strokeStart = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
     CABasicAnimation *strokeEnd = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     
@@ -84,22 +82,22 @@ static CGFloat circleStrokeEnd      = 1;
 - (CGPathRef)checkPath
 {
     UIBezierPath* oval1DrawPath = UIBezierPath.bezierPath;
-    [oval1DrawPath moveToPoint: CGPointMake(156.43, 86.36)];
-    [oval1DrawPath addLineToPoint: CGPointMake(142.5, 98.07)];
-    [oval1DrawPath addLineToPoint: CGPointMake(128.95, 82.33)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(129.57, 81.3) controlPoint1: CGPointMake(128.95, 82.33) controlPoint2: CGPointMake(129.21, 81.86)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(130.33, 80.2) controlPoint1: CGPointMake(129.78, 80.98) controlPoint2: CGPointMake(130.04, 80.59)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(132.12, 78.11) controlPoint1: CGPointMake(130.88, 79.45) controlPoint2: CGPointMake(131.59, 78.63)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(134.53, 76.08) controlPoint1: CGPointMake(132.69, 77.54) controlPoint2: CGPointMake(133.62, 76.72)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(136.61, 74.79) controlPoint1: CGPointMake(135.59, 75.33) controlPoint2: CGPointMake(136.61, 74.79)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(154.09, 74.65) controlPoint1: CGPointMake(136.61, 74.79) controlPoint2: CGPointMake(144.78, 69.91)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(162.36, 100.09) controlPoint1: CGPointMake(163.4, 79.39) controlPoint2: CGPointMake(167.11, 90.78)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(136.91, 108.36) controlPoint1: CGPointMake(157.62, 109.4) controlPoint2: CGPointMake(146.22, 113.1)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(126.72, 93.82) controlPoint1: CGPointMake(131.18, 105.44) controlPoint2: CGPointMake(127.47, 99.88)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(126.59, 90.86) controlPoint1: CGPointMake(126.59, 92.84) controlPoint2: CGPointMake(126.55, 91.85)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(127.06, 87.26) controlPoint1: CGPointMake(126.65, 89.66) controlPoint2: CGPointMake(126.78, 88.45)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(127.79, 84.78) controlPoint1: CGPointMake(127.1, 87.12) controlPoint2: CGPointMake(127.36, 85.92)];
-    [oval1DrawPath addCurveToPoint: CGPointMake(128.92, 82.39) controlPoint1: CGPointMake(128.22, 83.67) controlPoint2: CGPointMake(128.91, 82.41)];
+    [oval1DrawPath moveToPoint: CGPointMake(30.43, 14.36)];
+    [oval1DrawPath addLineToPoint: CGPointMake(16.5, 26.07)];
+    [oval1DrawPath addLineToPoint: CGPointMake(2.95, 10.33)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(3.57, 9.3) controlPoint1: CGPointMake(2.95, 10.33) controlPoint2: CGPointMake(3.21, 9.86)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(4.33, 8.2) controlPoint1: CGPointMake(3.78, 8.98) controlPoint2: CGPointMake(4.04, 8.59)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(6.12, 6.11) controlPoint1: CGPointMake(4.88, 7.45) controlPoint2: CGPointMake(5.59, 6.63)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(8.53, 4.08) controlPoint1: CGPointMake(6.69, 5.54) controlPoint2: CGPointMake(7.62, 4.72)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(10.61, 2.79) controlPoint1: CGPointMake(9.59, 3.33) controlPoint2: CGPointMake(10.61, 2.79)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(28.09, 2.65) controlPoint1: CGPointMake(10.61, 2.79) controlPoint2: CGPointMake(18.78, -2.09)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(36.36, 28.09) controlPoint1: CGPointMake(37.4, 7.39) controlPoint2: CGPointMake(41.11, 18.78)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(10.91, 36.36) controlPoint1: CGPointMake(31.62, 37.4) controlPoint2: CGPointMake(20.22, 41.1)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(0.72, 21.82) controlPoint1: CGPointMake(5.18, 33.44) controlPoint2: CGPointMake(1.47, 27.88)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(0.59, 18.86) controlPoint1: CGPointMake(0.59, 20.84) controlPoint2: CGPointMake(0.55, 19.85)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(1.06, 15.26) controlPoint1: CGPointMake(0.65, 17.66) controlPoint2: CGPointMake(0.78, 16.45)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(1.79, 12.78) controlPoint1: CGPointMake(1.1, 15.12) controlPoint2: CGPointMake(1.36, 13.92)];
+    [oval1DrawPath addCurveToPoint: CGPointMake(2.92, 10.39) controlPoint1: CGPointMake(2.22, 11.67) controlPoint2: CGPointMake(2.91, 10.41)];
     
     CGPathRef pathRef = oval1DrawPath.CGPath;
     return pathRef;
