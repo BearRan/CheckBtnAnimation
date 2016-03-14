@@ -32,6 +32,10 @@ static CGFloat circleStrokeEnd      = 1;
     
     //self.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.6];
     
+    self.layer.borderWidth = 3.0f;
+    self.layer.cornerRadius = self.frame.size.width/2.0;
+    self.layer.borderColor = [[UIColor whiteColor] colorWithAlphaComponent:0.3].CGColor;
+    
     checkShapeLayer = [CAShapeLayer layer];
     checkShapeLayer.path = [self checkPath];
     checkShapeLayer.lineWidth = 3.0f;
@@ -40,7 +44,7 @@ static CGFloat circleStrokeEnd      = 1;
     checkShapeLayer.strokeColor = [UIColor whiteColor].CGColor;
     checkShapeLayer.fillColor = [UIColor clearColor].CGColor;
     checkShapeLayer.actions = [[NSDictionary alloc] initWithObjectsAndKeys:
-                     [NSNull null],@"strokeStart",[NSNull null],@"strokeEnd",[NSNull null],@"transform", nil];
+                     [NSNull null],@"strokeStart",[NSNull null],@"strokeEnd", nil];
     
     [self.layer addSublayer:checkShapeLayer];
     
