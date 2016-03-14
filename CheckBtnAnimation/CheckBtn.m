@@ -66,20 +66,20 @@ static CGFloat circleStrokeEnd      = 1;
     if (self.showCheck) {
     
         strokeStart.toValue = [NSNumber numberWithFloat:checkStrokeStart];
-        strokeStart.duration = 0.5;
+        strokeStart.duration = 0.4;
         strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25 :0.4 :0.3 :1.6];
 
         strokeEnd.toValue = [NSNumber numberWithFloat:checkStrokeEnd];
-        strokeEnd.duration = 0.6;
+        strokeEnd.duration = 0.5;
         strokeEnd.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.15 :0.6 :0.6 :1];
     }else{
     
         strokeStart.toValue = [NSNumber numberWithFloat:circleStrokeStart];
-        strokeStart.duration = 0.5;
+        strokeStart.duration = 0.4;
         strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25 :-0.4 :0.58 :0.88];
 
         strokeEnd.toValue = [NSNumber numberWithFloat:circleStrokeEnd];
-        strokeEnd.duration = 0.7;
+        strokeEnd.duration = 0.55;
         strokeEnd.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25 :-0.08 :0.64 :0.1];
     }
     
