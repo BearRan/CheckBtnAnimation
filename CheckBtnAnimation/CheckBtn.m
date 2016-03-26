@@ -49,7 +49,7 @@ static CGFloat circleStrokeEnd      = 1;
     [self.layer addSublayer:checkShapeLayer];
     
     self.showCheck = NO;
-    
+    checkShapeLayer.strokeStart
     return self;
 }
 
