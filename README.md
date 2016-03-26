@@ -1,7 +1,7 @@
 # CheckBtnAnimation
-CheckBtnAnimation
 
 在花瓣网上找的原型，通过路径动画做成的动效
+---
 博客讲解地址：http://blog.csdn.net/xiongbaoxr/article/details/50890565
 ---
 * 欢迎同样喜欢动效的工程师／UI设计师／产品加入我们
